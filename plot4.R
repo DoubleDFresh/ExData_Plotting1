@@ -1,6 +1,7 @@
 ## First read from your default working directory the *.txt file 
 ## Read in a subset of the data starting from 1 Feb 2007
 ## Read in slightly more rows just beyond 3 Feb 2007
+library(data.table)
 houseData <- ("./household_power_consumption.txt")
 hhData <- fread(houseData, nrows = 3500, header = FALSE, verbose = F, skip = "1/2/2007")
 setnames(hhData, c("Date", "Time", "Global_active_power", "Global_reactive_power", "Voltage", "Global_intensity", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
